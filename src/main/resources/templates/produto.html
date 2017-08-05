@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cadastro de produtos</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+
+  <body>
+
+    <header class="layout-cabecalho layout-cabecalho--home">
+      <div class="container">
+
+         <nav class="navegacao">
+          <img src="imagens/logo.png" width="250" height="58" alt="logo sis03">
+            
+        
+         </nav>
+        
+      </div>
+    </header>
+
+    <main class="layout-planos">
+
+      <div class="container">
+
+        <form action="#" method="post">
+          <h1 class="titulo-formulario">Cadastro de Produtos</h1>
+
+         
+          <div class="row"> <!-- 1 -->
+             <div class="col-sm-5">
+                <div class="grupo-entrada">
+                  <label for="descricao">Descrição</label>
+                  <input id="descricao" name="descricao" type="text" class="campo" required>
+                </div>
+             </div> 
+             <div class="col-sm-3"> 
+                <div class="grupo-entrada">
+                  <label for="contato">Setor</label>
+                  <input id="contato" name="contato" type="text" class="campo" required>
+                </div>
+             </div>   
+             <div class="col-sm-4"> 
+                <div class="grupo-entrada">
+                  <label for="fornecedor">Fornecedor</label>
+                  <input id="fornecedor" name="fornecedor" type="text" class="campo" required>
+                </div>
+             </div>  
+
+          </div>    
+
+          <div class="row"> <!-- 2 -->
+            <div class="col-sm-4">
+              <div class="grupo-entrada">
+                <label for="fabricante">Fabricante</label>
+                <input id="fabricante" name="fabricante" type="text" class="campo" required>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <div class="grupo-entrada">
+                <label for="un">UN</label>
+                <input id="un" name="un" type="text" class="campo" required>
+              </div>
+            </div>
+            
+            <div class="col-sm-2">
+              <div class="grupo-entrada">
+                <label for="preco-custo">Preço Custo</label>
+                <input id="preco-custo" name="precoCusto" type="text" class="campo" required>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <div class="grupo-entrada">
+                <label for="porcentagem">100%</label>
+                <input id="porcentagem"  type="text" class="campo" required>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="grupo-entrada">
+                <label for="preco-venda">Preço Venda</label>
+                <input id="preco-venda" name="precoVenda" type="text" class="campo" required>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="grupo-entrada">
+                <label for="qtd">Quantidade</label>
+                <input id="qtd" name="qtd" type="text" class="campo" required>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="row"> <!-- 3 -->
+            <div class="col-sm-2">
+              <div class="grupo-entrada">
+                <label for="qtd-minima">QTD Minima</label>
+                <input id="qtd-minima" name="qtdMinima" type="text" class="campo" required>
+              </div>
+            </div>
+             <div class="col-sm-2">
+                  <div class="grupo-entrada">
+                    <label for="imprimir">Imprimir</label>
+                    <select id="imprimir" name="imprimir" class="campo">
+                      <option>Selecione</option>
+                      <option value="SIM">Sim</option>
+                      <option value="NAO">Não</option>
+                    </select>
+                  </div>
+                </div>
+            
+            <div class="col-sm-2">
+                <div class="grupo-entrada">
+                  <label for="cst">CST</label>
+                  <input id="cst" name="cst" type="text" class="campo" required>
+                </div>
+            </div>   
+            <div class="col-sm-1">
+                <div class="grupo-entrada">
+                  <label for="aliquota-ipi">Ali. IPI</label>
+                  <input id="aliquota-ipi" name="aliquotaIpi" type="text" class="campo" required>
+                </div>
+            </div> 
+            <div class="col-sm-1">
+                <div class="grupo-entrada">
+                  <label for="codigo-ipi">Cod. IPI</label>
+                  <input id="codigo-ipi" name="codigoIpi" type="text" class="campo" required>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="grupo-entrada">
+                  <label for="peso-bruto">Peso Bruto</label>
+                  <input id="peso-bruto" name="pesoBruto" type="text" class="campo" required>
+                </div>
+            </div>    
+            <div class="col-sm-2">
+                <div class="grupo-entrada">
+                  <label for="peso-liquido">Peso Líquido</label>
+                  <input id="peso-liquido" name="pesoLiquido" type="text" class="campo" required>
+                </div>
+            </div>  
+          </div>
+
+          <div class="row"> <!-- 4 -->
+                
+                <div class="col-sm-1">
+                  <div class="grupo-entrada">
+                    <label for="icms">ICMS</label>
+                    <input id="icms" name="icms" type="text" class="campo" requered>
+                  </div>   
+                   
+                </div>
+
+                <div class="col-sm-1">
+                  <div class="grupo-entrada">
+                    <label for="iss">ISS</label>
+                    <input id="iss" name="iss" type="text" class="campo" requered>
+                  </div>   
+                </div>
+                <div class="col-sm-1">
+                  <div class="grupo-entrada">
+                    <label for="simples">Simples</label>
+                    <input id="simples" name="simples" type="text" class="campo" requered>
+                  </div>   
+                </div>
+                <div class="col-sm-2">
+                  <div class="grupo-entrada">
+                    <label for="complemeto">Complemento</label>
+                    <select id="complemento" name="complemento" class="campo">
+                      <option>Selecione</option>
+                      <option value="SIM">Sim</option>
+                      <option value="NAO">Não</option>
+                    </select>
+                  </div> 
+                </div>
+                <div class="col-sm-1">
+                  <div class="grupo-entrada">
+                    <label for="complemento-porcentagem">100%</label>
+                    <input id="complemento-porcentagem" name="complementoPorcentagem" type="text" class="campo" requered>
+                  </div>   
+                </div>
+                <div class="col-sm-3">
+                  <div class="grupo-entrada">
+                    <label for="complemento1">Complemento1</label>
+                    <input id="complemento1" name="complemento1" type="text" class="campo" requered>
+                  </div>   
+                </div>
+                <div class="col-sm-3">
+                  <div class="grupo-entrada">
+                    <label for="complemento2">Complemento2</label>
+                    <input id="complemento2" name="complemento2" type="text" class="campo" requered>
+                  </div>   
+                </div>
+            </div>
+
+            <div class="row"><!-- 5 -->
+                
+                <div class="col-sm-3">
+                   <div class="grupo-entrada">
+                     <label for="data-cadastro">Datada do Cadastro</label>
+                     <input id="data-cadastro" name="dataCadastro" type="date" class="campo" required>
+                   </div>
+                  
+                </div>
+                <div class="col-sm-2">
+                  <div class="grupo-entrada">
+                    <label for="ativo">Ativo</label>
+                    <select id="ativo" name="ativo" class="campo">
+                      <option>Selecione</option>
+                      <option value="SIM">Sim</option>
+                      <option value="NAO">Não</option>
+                    </select>
+                  </div> 
+                </div>
+                <div class="col-sm-3">
+                    <div class="grupo-entrada">
+                       <label for="codigo-barra">Codigo Barra</label>
+                       <input id="codigo-barra" name="codigoBarra" type="text" class="campo" required>
+                   </div>
+                </div>
+                <div class="col-sm-1" style="padding-top: 20px ;padding-left: 0px">
+                   <input type="submit" value="Foto" class="botao" >
+                </div>
+                <div class="col-sm-3" style="padding: 0">
+                     <div class="plano2">
+                        <td><img src="imagens/computador.png" width="240" height="144" alt="logosis03" style="margin-top: -10px ; padding:0"></td>
+                     </div>
+                </div>
+
+            </div>
+          </div>
+
+          
+
+          <div style="text-align: center; margin-top: 20px">
+            <input type="submit" value="Salvar" class="botao  botao--principal">
+            <input type="submit" value="Novo" class="botao  botao--principal">
+            <input type="submit" value="Imprimir" class="botao  botao--principal">
+            <input type="submit" value="Pesquisar" class="botao  botao--principal">
+          </div>
+
+           <div class="container" style="padding: 20px 0px">
+            <body>
+                <table class="tabela">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Categoria</th>
+                      <th>Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Monitor LG 22"</td>
+                      <td>Informática</td>
+                      <td>R$592,82</td>
+                    </tr>
+                    <tr>
+                      <td>Monitor LG 22"</td>
+                      <td>Acessórios</td>
+                      <td>R$87,00</td>
+                    </tr>
+                    <tr>
+                      <td>Sabão em pó</td>
+                      <td>Limpeza</td>
+                      <td>R$11,50</td>
+                    </tr>
+                    <tr>
+                      <td>Coca-cola 2L</td>
+                      <td>Bebidas</td>
+                      <td>R$5,90</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </body>
+          </div>    
+        </form>
+
+      </div>
+    </main>
+
+    <footer class="layout-rodape">
+      <div class="container">
+        <p>&copy; WMSoft. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

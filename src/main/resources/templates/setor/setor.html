@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:data="http://www.thymeleaf.org/extras/data"
+	layout:decorator="'layout/LayoutPadrao'">
+<head>
+<title>Cadastro de Setores</title>
+</head>
+<body>
+
+	<section class="layout-assinatura" layout:fragment="conteudo">
+		<main class="layout-assinatura">
+		<div class="container">
+			<th:block th:include="fragments/MensagemSucesso"></th:block>
+
+			<h1 class="titulo-formulario">Cadastro de Setores</h1>
+			<!-- tabela -->
+			<div class="table-responsive">
+				<table class="tabela">
+
+					<thead>
+						<tr>
+							<th>Cod.</th>
+							<th>Descrição</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="setor : ${todossetores}">
+							<td th:text="${setor.codigo}">1</td>
+							<td th:text="${setor.descricao}">Informática</td>
+							<td class="text-center">
+							
+							<a class="btn btn-link btn-xs"
+								title="Editar" rel="tooltip"  data-toggle="modal" data-target="#modalEditarSetor" th:attr="data-codigo=${setor.codigo}, data-descricao=${setor.descricao}" ><span
+									class="glyphicon glyphicon-pencil text-warning"></span></a> 
+									
+							
+							<a class="btn btn-link btn-xs"
+								title="Editar" rel="tooltip" th:href="@{/setores/{codigo}(codigo=${setor.codigo})}" ><span
+									class="glyphicon glyphicon-pencil text-warning"></span></a> 
+									
+							  <a class="btn btn-link btn-xs" data-toggle="modal"
+								data-target="#exclusaoModal" title="Excluir" rel="tooltip"
+								th:attr="data-codigo=${setor.codigo}, data-descricao=${setor.descricao}"><span
+									class="glyphicon glyphicon-trash text-danger"></span></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- tabela -->
+
+			<footer class="row pen">
+				
+				<div class="col-sm-8">
+					<button class="btn btn-primary" data-toggle="modal" data-target="#NovaS">Novo</button>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="input-group">
+						<input type="text" name="busca" class="form-control"
+							placeholder="Pesquisar por nome" /> <span class="input-group-btn">
+							<button type="button" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+		</main>
+		<th:block th:include="fragments/ModalEditarSetor"></th:block>
+		<th:block th:include="fragments/ModalNovoSetor"></th:block>
+		<th:block th:include="fragments/ModalExcluirSetor"></th:block>
+
+	</section>
+
+</body>
+
+</html>

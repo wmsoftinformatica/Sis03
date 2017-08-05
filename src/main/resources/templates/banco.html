@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cadastro Bancos</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+  </head>
+
+  <body>
+
+    <header class="layout-cabecalho layout-cabecalho--home">
+      <div class="container">
+
+       <nav class="navegacao">
+        <img src="imagens/logo.png" width="200" height="58" alt="logo sis03">
+          
+      
+       </nav>
+        
+      </div>
+    </header>
+
+    <main class="layout-planos">
+
+      <div class="container">
+
+        <form action="#" method="post">
+              <h1 class="titulo-formulario">Cadastro Bancos</h1>
+
+         
+              <div class="row"> <!-- 1 -->
+              
+                 <div class="col-sm-6">
+                    <div class="grupo-entrada">
+                      <label for="nome">Nome</label>
+                      <input id="nome" name="nome" type="text" class="campo" required>
+                    </div>
+                 </div> 
+                 <div class="col-sm-6">
+                    <div class="grupo-entrada">
+                      <label for="endereco">Endereço</label>
+                      <input id="endereco" name="endereco" type="text" class="campo" required>
+                    </div>
+                 </div>   
+              </div>    
+
+          
+          
+          
+          
+              <div class="row"><!-- 3-->
+                 
+                <div class="col-sm-2">
+                    <div class="grupo-entrada">
+                      <label for="agencia">Agencia</label>
+                      <input id="agencia" name="agencia" type="email" class="campo" required>
+                    </div>
+                </div>    
+                <div class="col-sm-2">
+                    <div class="grupo-entrada">
+                      <label for="conta">Conta</label>
+                      <input id="conta" name="conta" type="email" class="campo" required>
+                    </div>
+                </div>  
+                <div class="col-sm-3">
+                     <div class="grupo-entrada">
+                         <label for="telefone-1">Telefone</label>
+                         <input id="telefone-1" name="telefone1" type="text" class="campo" required>
+                     </div>
+                      
+                </div>
+                <div class="col-sm-2">
+                       <div class="grupo-entrada">
+                         <label for="data-cadastro">Datada Cadastro</label>
+                         <input id="data-cadastro" name="dataCadastro" type="date" class="campo" required>
+                       </div>                  
+                 </div>   
+                
+
+              </div>
+                    
+          
+          </div>
+
+          
+
+          <div style="text-align: center; margin-top: 20px">
+            <input type="submit" value="Salvar" class="botao  botao--principal">
+            <input type="submit" value="Novo" class="botao  botao--principal">
+            <input type="submit" value="Imprimir" class="botao  botao--principal">
+            <input type="submit" value="Pesquisar" class="botao  botao--principal">
+          </div>
+
+           <div class="container" style="padding: 20px 0px">
+            <body>
+                <table class="tabela">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Categoria</th>
+                      <th>Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Monitor LG 22"</td>
+                      <td>Informática</td>
+                      <td>R$592,82</td>
+                    </tr>
+                    <tr>
+                      <td>Monitor LG 22"</td>
+                      <td>Acessórios</td>
+                      <td>R$87,00</td>
+                    </tr>
+                    <tr>
+                      <td>Sabão em pó</td>
+                      <td>Limpeza</td>
+                      <td>R$11,50</td>
+                    </tr>
+                    <tr>
+                      <td>Coca-cola 2L</td>
+                      <td>Bebidas</td>
+                      <td>R$5,90</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </body>
+          </div>    
+        </form>
+
+      </div>
+    </main>
+
+    <footer class="layout-rodape">
+      <div class="container">
+        <p>&copy; WMSoft. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

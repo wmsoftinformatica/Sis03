@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:data="http://www.thymeleaf.org/extras/data"
+	  layout:decorator="'layout/LayoutPadrao'">
+  <head>
+    <title>Dashboard</title>
+
+  </head>
+  <body>
+
+<section layout:fragment="conteudo">
+     
+    <div id="planos" class="layout-planos">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+
+            <article class="plano">
+              <h2 class="plano__cabecalho">Cadastros</h2>
+             
+              <ul class="plano__caracteristicas">
+                <li><a href="cliente.html" class="botao--menu" style="text-decoration: none;">Clientes</a></li>
+                <li><a href="fornecedor.html" class="botao--menu" style="text-decoration: none;">Fornecedores</a></li>
+                <li><a href="produto.html" class="botao--menu" style="text-decoration: none;">Produtos</a></li>
+                <li><a href="funcionario.html" class="botao--menu" style="text-decoration: none;">Funcionários</a></li>
+                <li><a href="transportadora.html" class="botao--menu" style="text-decoration: none;">Transportadoras</a></li>
+                <li><a href="banco.html" class="botao--menu" style="text-decoration: none;">Bancos</a></li>
+                <li><a th:href="@{setores}" class="botao--menu" style="text-decoration: none;">Setores</a></li>
+                <li style="color: #fff">t</li>
+              </ul>
+              
+            </article>
+
+          </div>
+          <div class="col-sm-3">
+
+            <article class="plano">
+              <h2 class="plano__cabecalho">Diários</h2>
+              
+              <ul class="plano__caracteristicas">
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Orçamentos</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Vendas Direta</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Reposição Estoque</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Controle de Entregas</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Fluxo de caixa</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Compras</a></li>
+                <li style="color: #fff">t</li>
+                 <li style="color: #fff">t</li>
+              </ul>
+          </article>
+
+          </div>
+          <div class="col-sm-3">
+
+            <article class="plano">
+              <h2 class="plano__cabecalho">Financeiros</h2>
+              
+              <ul class="plano__caracteristicas">
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Debitos</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Creditos</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Caixa</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Comisão</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Inativos Debito</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Inativos Credito</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Cheques</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">cartões</a></li>
+              </ul>
+            </article>
+
+          </div>
+          <div class="col-sm-2">
+
+            <article class="plano">
+              <h2 class="plano__cabecalho">Utilitários</h2>
+              
+              <ul class="plano__caracteristicas">
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Manuteção</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Calendário</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Calculadora</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Backup</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Email</a></li>
+                <li style="color: #fff">t</li>
+                <li style="color: #fff">t</li>
+                 <li style="color: #fff">t</li>
+                                          
+              </ul>
+              
+            </article>
+
+          </div>
+          <div class="col-sm-2  ultima-coluna">
+
+            <article class="plano">
+              <h2 class="plano__cabecalho">Configurações</h2>
+              
+              <ul class="plano__caracteristicas">
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Geral</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Clientes</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Produtos</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Funcionários</a></li>
+                <li><a href="#" class="botao--menu" style="text-decoration: none;">Caixa</a></li>
+                <li style="color: #fff">t</li>
+                <li style="color: #fff">t</li>
+                 <li style="color: #fff">t</li>
+               
+              </ul>
+              
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  </body>
+</html>

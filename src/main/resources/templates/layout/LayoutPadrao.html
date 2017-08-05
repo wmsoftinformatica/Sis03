@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:data="http://www.thymeleaf.org/extras/data">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Sis03</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/base.css}"/>
+    <link rel="stylesheet" th:href="@{/css/layout.css}"/>
+    <link rel="stylesheet" th:href="@{/css/componentes.css}"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+  </head>
+
+  <body>    
+     <header class="layout-cabecalho  layout-cabecalho--home">
+      <div class="container">
+
+        <nav class="navegacao">
+         <span><a th:href="@{/}"><img th:src="@{/imagens/logo.png}"  width="200" height="58" alt="logo sis03"/></a></span>
+         
+           <div class="navegacao__menu">
+            <button class="botao-chaveador  js-botao-chaveador"></button>
+
+            <ul class="menu  js-menu">
+              <li class="menu__item">
+                <a href="#">Suporte</a>
+              </li>
+              <li class="menu__item">
+                <a href="#planos">Sobre</a>
+              </li>
+              <li class="menu__item">
+                <a href="#">Contato</a>
+              </li>
+              <li class="menu__item  menu__item--botao">
+                <a href="#" class="botao  botao--login">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div> 
+    </header>
+
+    <div layout:fragment="conteudo">
+
+
+    </div>
+
+    <footer class="layout-rodape">
+      <div class="container">
+        <p>&copy; WMSoft 2017. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+ <script th:src="@{/javascripts/jquery-3.2.1.min.js}"></script>
+ <script th:src="@{/javascripts/bootstrap.min.js}"></script>
+ <script th:src="@{/javascripts/app.js}"></script>
+ <script th:src="@{/javascripts/main.js}"></script>
+ 
+ 
+ 
+  </body>
+
+</html>
