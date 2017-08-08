@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org">
+	
+ <!--modal novo setor -->
+    <div class="modal fade" id="NovaS">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" data-dismiss="modal" class="close">
+            <span>&times;</span>
+          </button>
+    				<div class="col-xs-10">
+<h1 class="titulo-formulario" th:if="${banco.novo}">Cadastro de Banco</h1>
+			<h1 class="titulo-formulario" th:unless="${banco.novo}" th:text="|Edicao do Banco  ${banco.nome}|">Edicao do Banco</h1>
+				</div>
+        </div>
+        <form method="POST"  th:object="${banco}" th:action="${banco.novo}? @{/bancos/novo} : @{/bancos/{codigo}(codigo=${banco.codigo})}">
+          <div class="modal-body">
+
+            <div class="row">
+            
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="codigo">Codigo</label>
+	                     <input id="codigo" th:field="*{codigo}"  class="campo" />
+	                   </div>
+	             </div>
+	             
+	             <div class="col-sm-10">
+	                   <div class="grupo-entrada">
+	                     <label for="nome">nome</label>
+	                     <input id="nome" th:field="*{nome}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             
+	          </div>  
+	           <div class="row"> 
+	           
+		           <div class="col-sm-12">
+			          <div class="modal-footer">
+			            <button type="reset" class="btn btn-danger">Limpar</button>
+			            <button type="submit" class="btn btn-primary">Salvar</button>
+			          </div>
+		          </div>
+		          
+	           </div>
+	           
+	      </div>
+          
+        </form>
+      </div>
+    </div>
+  </div> 
+<!--modal novo setor --> 
+
+</html>

@@ -56,5 +56,9 @@ public class Banco {
 		Telefone = telefone;
 	}
 	
-
+//	verificar ser e novo
+	public Boolean isNovo(){
+		
+		return codigo == null;
+	}
 }

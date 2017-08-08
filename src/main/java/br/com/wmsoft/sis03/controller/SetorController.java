@@ -24,7 +24,7 @@ import br.com.wmsoft.sis03.service.CadastroSetorService;
 @RequestMapping("setores")
 public class SetorController {
 	private static final String HOME_VIEW = "setor/setor";
-	private static final String CADASTRO_VIEW = "setor/CadastroSetor";
+//	private static final String CADASTRO_VIEW = "setor/CadastroSetor";
 	
 	@Autowired
 	Setores setores;
@@ -34,11 +34,10 @@ public class SetorController {
 	
 	
 	@RequestMapping("/novo")
-//	@RequestMapping
 	public ModelAndView novo(Setor setor){
 		
 
-		ModelAndView mv = new ModelAndView( CADASTRO_VIEW);
+		ModelAndView mv = new ModelAndView( HOME_VIEW);
 			
 		return mv;
 	}

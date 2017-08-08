@@ -12,13 +12,15 @@ import br.com.wmsoft.sis03.repository.Bancos;
 @Controller
 @RequestMapping("bancos")
 public class BancoController {
+	
+private static final String HOME_VIEW = "banco/Banco";
 
 @Autowired   
 Bancos bancos;	
 	
 @GetMapping
 public ModelAndView pesquisar(Banco banco){
-	ModelAndView mv = new ModelAndView("banco/CadastroBanco");
+	ModelAndView mv = new ModelAndView(HOME_VIEW);
 	mv.addObject("todosBancos",bancos.findAll());
 	
 	return mv;
