@@ -2,8 +2,8 @@
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:th="http://www.thymeleaf.org">
 	
- <!--modal editar setor -->
-    <div class="modal fade" id="modalEditarBanco">
+ <!--modal editar funcionario -->
+    <div class="modal fade" id="modalEditarFuncionario">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,10 +11,10 @@
             <span>&times;</span>
           </button>
 				<div class="col-xs-10">
-					<h1 class="titulo-formulario">Editar de Banco</h1>
+					<h1 class="titulo-formulario">Editar de Funcionario</h1>
 				</div>
 			</div>
-        <form method="POST"  th:object="${banco}" th:action="${banco.novo}? @{/bancos/novo} : @{/bancos/{codigo}(codigo=${banco.codigo})}">
+        <form method="POST"  th:object="${funcionario}" th:action="${funcionario.novo}? @{/funcionarios/novo} : @{/funcionarios/{codigo}(codigo=${funcionario.codigo})}">
           <div class="modal-body">
 
             <div class="row">
@@ -51,6 +51,6 @@
       </div>
     </div>
   </div> 
-<!--modal editar setor --> 
+<!--modal editar funcionario --> 
 
 </html>

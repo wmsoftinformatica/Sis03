@@ -6,25 +6,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.wmsoft.sis03.model.Fornecedor;
-import br.com.wmsoft.sis03.repository.Fornecedores;
+import br.com.wmsoft.sis03.model.Funcionario;
+import br.com.wmsoft.sis03.repository.Funcionarios;
 
 @Controller
-@RequestMapping("fornecedores")
-public class FornecedorController {
+@RequestMapping("funcionarios")
+public class FuncionarioController {
 	
-	private static final String HOME_VIEW = "fornecedor/Fornecedor";
-
-	@Autowired   
-	Fornecedores fornecedores;	
-		
+	private static final String HOME_VIEW = "funcionario/Funcionario";
+	
+	@Autowired
+	Funcionarios funcionarios;
+	
 	@GetMapping
-	public ModelAndView pesquisar(Fornecedor fornecedor){
+	public ModelAndView pesquisa(Funcionario funcionario){
 		ModelAndView mv = new ModelAndView(HOME_VIEW);
-		mv.addObject("todosFornecedores",fornecedores.findAll());
+		mv.addObject("todosFuncionarios",funcionarios.findAll());
 		
 		return mv;
+		
 	}
-
+	
+			
 
 }

@@ -3,6 +3,7 @@ package br.com.wmsoft.sis03.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,9 +26,20 @@ public ModelAndView pesquisar(Banco banco){
 	
 	return mv;
 }
-//	@RequestMapping("/novo")
-//	public String novo(){
-//		
-//		return "banco/CadastroBanco";
-//	}
+
+@RequestMapping("/novo")
+public ModelAndView novo(Banco banco){
+	
+
+	ModelAndView mv = new ModelAndView( HOME_VIEW);
+		
+	return mv;
+}
+
+@GetMapping("/{codigo}")
+	public ModelAndView edicao(@PathVariable("codigo") Banco banco) {
+		ModelAndView mv = novo(banco);
+		mv.addObject(banco);
+		return mv;
+	}
 }
