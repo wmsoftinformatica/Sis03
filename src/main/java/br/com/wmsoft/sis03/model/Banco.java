@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 
 @Entity
 public class Banco {
@@ -13,7 +15,9 @@ public class Banco {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
+	@NotEmpty(message="O nome nao pode estar vazio")
 	private String nome;
+	
 	private String endereco;
 	private String agencia;
 	private String conta;

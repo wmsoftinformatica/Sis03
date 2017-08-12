@@ -10,10 +10,12 @@
 <body>
 
 	<section class="layout-assinatura" layout:fragment="conteudo">
+	
+	
 		<main class="layout-planos">
 
 		<div class="container">
-
+            <th:block th:include="fragments/MensagemSucesso"></th:block>
 			<form action="#" method="post">
 				<h1 class="titulo-formulario">Cadastro Bancos</h1>
 
@@ -39,17 +41,21 @@
 								<td th:text="${banco.conta}">Conta</td>
 								<td th:text="${banco.telefone}">Telefone</td>
 
-								<td class="text-center"><a class="btn btn-link btn-xs"
+								<td class="text-center">
+								
+								<a class="btn btn-link btn-xs"
 									title="Editar" rel="tooltip" data-toggle="modal"
 									data-target="#modalEditarBanco"
 									th:attr="data-codigo=${banco.codigo}, data-nome=${banco.nome}"><span
-										class="glyphicon glyphicon-pencil text-warning"></span></a> <a
-									class="btn btn-link btn-xs" title="Editar" rel="tooltip"
+									class="glyphicon glyphicon-pencil text-warning"></span></a> 
+									
+									<a class="btn btn-link btn-xs" title="Editar" rel="tooltip"
 									th:href="@{/bancos/{codigo}(codigo=${banco.codigo})}"><span
-										class="glyphicon glyphicon-pencil text-warning"></span></a> <a
-									class="btn btn-link btn-xs" data-toggle="modal"
+										class="glyphicon glyphicon-pencil text-warning"></span></a>
+										
+										 <a class="btn btn-link btn-xs" data-toggle="modal"
 									data-target="#exclusaoModal" title="Excluir" rel="tooltip"
-									th:attr="data-codigo=${banco.codigo}, data-nome=${banco.nome}"><span
+									th:attr="data-codigo=${banco.codigo}, data-descricao=${banco.nome}"><span
 										class="glyphicon glyphicon-trash text-danger"></span></a></td>
 							</tr>
 						</tbody>
