@@ -10,10 +10,10 @@
 <body>
 
 	<section class="layout-assinatura" layout:fragment="conteudo">
-		<main class="layout-planos">
+		<main class="layout-assinatura">
 
 		<div class="container">
-
+            <th:block th:include="fragments/MensagemSucesso"></th:block>
 			<form action="#" method="post">
 				<h1 class="titulo-formulario">Cadastro Funcionario</h1>
 
@@ -35,17 +35,18 @@
 								<td th:text="${funcionario.endereco}">Endereço</td>
 								
 
-								<td class="text-center"><a class="btn btn-link btn-xs"
-									title="Editar" rel="tooltip" data-toggle="modal"
-									data-target="#modalEditarBanco"
-									th:attr="data-codigo=${funcionario.codigo}, data-nome=${funcionario.nome}"><span
-										class="glyphicon glyphicon-pencil text-warning"></span></a> <a
-									class="btn btn-link btn-xs" title="Editar" rel="tooltip"
-									th:href="@{/funcionarios/{codigo}(codigo=${funcionario.codigo})}"><span
-										class="glyphicon glyphicon-pencil text-warning"></span></a> <a
-									class="btn btn-link btn-xs" data-toggle="modal"
+								<td class="text-center">
+								
+								<a class="btn btn-link btn-xs"	title="Editar" rel="tooltip" data-toggle="modal"
+									data-target="#modalEditarFuncionario"
+									th:attr="data-codigo=${funcionario.codigo}, data-nome=${funcionario.nome}">
+									<span class="glyphicon glyphicon-pencil text-warning"></span></a>
+									
+									
+								    
+								    <a class="btn btn-link btn-xs" data-toggle="modal"
 									data-target="#exclusaoModal" title="Excluir" rel="tooltip"
-									th:attr="data-codigo=${funcionario.codigo}, data-nome=${funcionario.nome}"><span
+									th:attr="data-codigo=${funcionario.codigo}, data-descricao=${funcionario.nome}"><span
 										class="glyphicon glyphicon-trash text-danger"></span></a></td>
 							</tr>
 						</tbody>
@@ -76,9 +77,9 @@
 
 		</div>
 		</main>
-		<th:block th:include="funcionario/fragments/ModalEditarFuncionario"></th:block>
-		<th:block th:include="funcionario/fragments/ModalNovoFuncionario"></th:block>
-		<th:block th:include="funcionario/fragments/ModalExcluirFuncionario"></th:block>
+		<th:block th:include="funcionario/fragments/ModalEditar"></th:block>
+		<th:block th:include="funcionario/fragments/ModalNovo"></th:block>
+		<th:block th:include="funcionario/fragments/ModalExcluir"></th:block>
 	</section>
 </body>
 

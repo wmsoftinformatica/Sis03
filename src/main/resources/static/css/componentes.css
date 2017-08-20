@@ -1,4 +1,12 @@
 /*--------------------*\
+  MODAL
+\*--------------------*/
+.modal-dialog2{
+	
+  padding: 80px 1px 1px 1px;
+  
+}
+/*--------------------*\
   PLANO
 \*--------------------*/
 .plano {
@@ -378,19 +386,19 @@
   width: 100%;
    padding: 20px 20px;
   border-collapse: collapse; /*tira espaço bordas*/
-  border: 5px solid #ccc;
+  border: 2px solid #696969;
 }
 
 .tabela td, .tabela th {
-  padding: 10px 5px;
-  border: 1px solid #ccc;
+  padding: 1px 1px;
+  border: 1px solid #696969;
  
 }
 
 .tabela th {
   background-color: #FFDEAD;
 
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   text-align: left; /*alinha a esquerda*/
 }

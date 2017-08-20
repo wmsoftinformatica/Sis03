@@ -12,7 +12,7 @@
 	<section class="layout-assinatura" layout:fragment="conteudo">
 	
 	
-		<main class="layout-planos">
+		<main class="layout-assinatura">
 
 		<div class="container">
             <th:block th:include="fragments/MensagemSucesso"></th:block>
@@ -49,9 +49,7 @@
 									th:attr="data-codigo=${banco.codigo}, data-nome=${banco.nome}"><span
 									class="glyphicon glyphicon-pencil text-warning"></span></a> 
 									
-									<a class="btn btn-link btn-xs" title="Editar" rel="tooltip"
-									th:href="@{/bancos/{codigo}(codigo=${banco.codigo})}"><span
-										class="glyphicon glyphicon-pencil text-warning"></span></a>
+									
 										
 										 <a class="btn btn-link btn-xs" data-toggle="modal"
 									data-target="#exclusaoModal" title="Excluir" rel="tooltip"
@@ -67,8 +65,7 @@
 			<footer class="row pen">
 
 				<div class="col-sm-8">
-					<button class="btn btn-primary" data-toggle="modal"
-						data-target="#NovaS">Novo</button>
+					<button class="btn btn-primary" data-toggle="modal"	data-target="#NovaS">Novo</button>
 				</div>
 
 				<div class="col-sm-4">

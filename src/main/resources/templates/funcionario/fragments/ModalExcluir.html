@@ -2,18 +2,18 @@
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:th="http://www.thymeleaf.org">
 	
-<!--modal excluir setor -->
+<!--modal excluir funcionario -->
 		<div class="modal fade" id="exclusaoModal" tabindex="-1"
 			data-keyboard="false" data-backdrop="static">
 			<div class="modal-dialog">
-				<form th:attr="data-url-base='/fornecedores'"  method="POST">
+				<form th:attr="data-url-base='/funcionarios'"  method="POST">
 					<input type="hidden" name="_method" value="DELETE" />
 					<div class="modal-content">
 						<div class="modal-header">
 							<h4>Voce tem certeza?</h4>
 						</div>
 						<div class="modal-body">
-							<span>Tem certeza que deseja apagar o Setor</span>
+							<span>Tem certeza que deseja apagar o Funcionario</span>
 						</div>
 						<div class="modal-footer">
 							<button class="btn btn-link" type="button" data-dismiss="modal">Cancelar</button>
@@ -24,7 +24,7 @@
 				</form>
 			</div>
 		</div>
-		<!--modal excluir setor -->  
+		<!--modal excluir funcionario -->  
 
 
 </html>

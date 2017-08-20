@@ -22,14 +22,14 @@
 	             <div class="col-sm-2">
 	                   <div class="grupo-entrada">
 	                     <label for="codigo">Codigo</label>
-	                     <input id="codigo" th:field="*{codigo}"  class="campo" />
+	                     <input id="codigo" th:field="*{codigo}"  class="campo" readonly="readonly" />
 	                   </div>
 	             </div>
 	             
 	             <div class="col-sm-10">
 	                   <div class="grupo-entrada">
 	                     <label for="descricao">Setor</label>
-	                     <input id="descricao" th:field="*{descricao}" type="text" class="campo" />
+	                     <input id="descricao" th:field="*{descricao}" type="text" class="campo" required="required" maxlength="60" />
 	                   </div>
 	             </div>
 	             
