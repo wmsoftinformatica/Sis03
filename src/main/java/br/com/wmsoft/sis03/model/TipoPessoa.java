@@ -1,20 +1,32 @@
 package br.com.wmsoft.sis03.model;
 
 public enum TipoPessoa {
-	F("Fisica"),
-	J("Juridica");
+	FISICA("Fisica", "CPF", "000.000.000-00"),
+	JURIDICA("Juridica", "CNPJ", "00.000.000/0000-00");
 	
 	private String descricao;
+	private String documento;
+	private String mascara;
 
-	public String getDescricao() {
+	
+
+    TipoPessoa(String descricao, String documento, String mascara) {
+		this.descricao = descricao;
+		this.documento = documento;
+		this.mascara = mascara;
+	}
+
+    public String getDescricao() {
 		return descricao;
 	}
 
-    TipoPessoa(String descricao) {
-		this.descricao = descricao;
+	public String getDocumento() {
+		return documento;
 	}
 
-	
+	public String getMascara() {
+		return mascara;
+	}
 	
 
 }

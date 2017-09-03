@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.wmsoft.sis03.model.Cliente;
+import br.com.wmsoft.sis03.model.ClienteAtivo;
 import br.com.wmsoft.sis03.model.TipoPessoa;
 import br.com.wmsoft.sis03.model.UF;
 import br.com.wmsoft.sis03.repository.Clientes;
@@ -56,7 +57,7 @@ public ModelAndView novo(Cliente cliente){
 	
 
 	ModelAndView mv = new ModelAndView( HOME_VIEW);
-		
+	
 	return mv;
 }
 @PostMapping(value= {"/novo", "{\\d+}"})
@@ -80,7 +81,7 @@ public ModelAndView edicao(@PathVariable("codigo") Cliente cliente) {
 	return mv;
 }
 
-@ModelAttribute("todosTiposPessoa")
+@ModelAttribute("todosTipoPessoa")
 public List<TipoPessoa> todosTipoPessoa(){
 	
 	return Arrays.asList(TipoPessoa.values());
@@ -91,6 +92,12 @@ public List<TipoPessoa> todosTipoPessoa(){
 public List<UF> todosUF(){
 	
 	return Arrays.asList(UF.values());
+}
+
+@ModelAttribute("todosClienteAtivo")
+public List<ClienteAtivo> todosClienteAtivo(){
+	
+	return Arrays.asList(ClienteAtivo.values());
 }
 
 }

@@ -25,29 +25,53 @@
 					
 						<thead>
 							<tr>
+							    
 								<th>Codigo</th>
 								<th>Tipo</th>
 								<th>Nome</th>
 								<th>Endereço</th>
-								<th>Estado</th>
+								<th>Telefone1</th>
+								<th>Telefone2</th>
+								<th style="padding:0px 70px 0px 0px"></th>
 								
-								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="cliente : ${todosClientes}">
-							    <td th:text="${cliente.codigo}"></td>
-							    <td th:text="${cliente.tipoPessoa}"></td>
+							   
+							    <td th:text="${cliente.codigo}" class="text-center"></td>
+							    <td th:text="${cliente.tipoPessoa.descricao}"></td>
 							    
 								<td th:text="${cliente.nome}"></td>
 								<td th:text="${cliente.endereco}"></td>
-								<td th:text="${cliente.uf}"></td>
+								<td th:text="${cliente.telefone1}"></td>
+								<td th:text="${cliente.telefone2}"></td>
 								
-
-								<td class="text-center"><a class="btn btn-link btn-xs"
+								<td class="text-center" style="padding:1px"><a class="btn btn-link btn-xs"
 									title="Editar" rel="tooltip" data-toggle="modal"
 									data-target="#modalEditarCliente"
-									th:attr="data-codigo=${cliente.codigo}, data-nome=${cliente.nome}">
+									th:attr="data-codigo=${cliente.codigo},
+										   	 data-tipopessoa=${cliente.tipoPessoa}, 
+											 data-nome=${cliente.nome}, 
+											 data-endereco=${cliente.endereco},
+											 data-bairro=${cliente.bairro},
+											 data-cidade=${cliente.cidade},
+											 data-uf=${cliente.uf},
+											 data-cep=${cliente.cep},
+											 data-email=${cliente.email},
+											 data-email=${cliente.email},
+											 data-telefone1=${cliente.telefone1},
+											 data-telefone2=${cliente.telefone2},
+											 data-cpf=${cliente.cpf},
+											 data-rg=${cliente.rg},
+											 data-profissao=${cliente.profissao},
+											 data-dataNascimento=${cliente.dataNascimento},
+											 data-pai=${cliente.pai},
+											 data-mae=${cliente.mae},
+											 data-referencia1=${cliente.referencia1},
+											 data-referencia2=${cliente.referencia2},
+											 data-clienteAtivo=${cliente.clienteAtivo},
+											 data-dataCadastro=${cliente.dataCadastro}">
 									
 									<span class="glyphicon glyphicon-pencil text-warning"></span></a> 
 									
@@ -56,6 +80,8 @@
 									th:attr="data-codigo=${cliente.codigo}, data-descricao=${cliente.nome}"><span
 										class="glyphicon glyphicon-trash text-danger"></span></a>
 								</td>
+
+								
 							</tr>
 						</tbody>
 					</table>

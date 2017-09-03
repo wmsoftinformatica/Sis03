@@ -65,6 +65,16 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
 		</dependency>
+		
+		
+<!-- 				Thymeleaf extras data attribute -->
+<!-- 		<dependency> -->
+<!--     		<groupId>com.github.mxab.thymeleaf.extras</groupId> -->
+<!--     		<artifactId>thymeleaf-extras-data-attribute</artifactId> -->
+<!--     		<version>2.0.1</version> -->
+<!--     		<scope>compile</scope> -->
+<!-- 		</dependency> -->
+		
 	</dependencies>
 
 	<build>

@@ -23,16 +23,24 @@
 					<table class="tabela">
 						<thead>
 							<tr>
+							    <th>Codigo</th>
 								<th>Descriçao</th>
 								<th>Setor</th>
+								<th>QTD</th>
+								<th>Preço de Custo</th>
+								<th>Preço de Venda</th>
 								
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="produto : ${todosProdutos}">
+								<td th:text="${produto.codigo}">codigo</td>
 								<td th:text="${produto.descricao}">descriçao</td>
-								<td th:text="${produto.setor}">Setor</td>
+								<td th:text="${produto.setor}">setor</td>
+								<td th:text="${produto.qtd}">qtd</td>
+								<td th:text="${produto.precoCusto}">precoCusto</td>
+								<td th:text="${produto.precoVenda}">precoVenda</td>
 								
 
 								<td class="text-center"><a class="btn btn-link btn-xs"
