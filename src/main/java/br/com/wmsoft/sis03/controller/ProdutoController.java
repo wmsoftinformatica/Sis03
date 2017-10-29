@@ -79,15 +79,14 @@ public String excluir (@PathVariable Long codigo, RedirectAttributes attributes)
 	   return "redirect:/produtos";
 }
 @ModelAttribute("todosSN")
+
 public List<SN> todosSN(){
 	
 	return Arrays.asList(SN.values());
 }
 
-@ModelAttribute("todosImprimir")
-public List<Imprimir> todosImprimir(){
-	
-	return Arrays.asList(Imprimir.values());
-}
+
+
+
 
 }

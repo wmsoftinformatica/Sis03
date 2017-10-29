@@ -1,5 +1,7 @@
 package br.com.wmsoft.sis03.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -7,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.wmsoft.sis03.controller.Imprimir;
+
 
 @Entity
 public class Produto {
@@ -24,6 +26,7 @@ public class Produto {
 	private Integer precoVenda;
 	private Integer qtd;
 	private Integer qtdMinima;
+    private Integer lucro;
 	private Integer cst;
 	private Integer aliquotaIpi;
 	private Integer codigoIpi;
@@ -35,30 +38,29 @@ public class Produto {
 	private Integer complementoPorcentagem;
 	private String complemento1;
 	private String complemento2;
+	private Date dataCadastro;
 	
 	@Enumerated(EnumType.STRING)
 	private SN complemento;
 	
-	public SN getSn() {
+		
+	public SN getComplemento() {
 		return complemento;
 	}
-	public void setSn(SN sn) {
-		this.complemento = sn;
+	public void setComplemento(SN complemento) {
+		this.complemento = complemento;
+		
 	}
-	
-	
-	
 	@Enumerated(EnumType.STRING)
-	private Imprimir imprimirProduto;
+	private SN imprimir;    //"imprimir" ATRIBUTO
 	
-	public Imprimir getImprimir() {
-		return imprimirProduto;
+
+	public SN getImprimir() {  //get tem o ter o mesmo nome do atributo "imprimir"
+		return imprimir;
 	}
-	public void setImprimir(Imprimir imprimir) {
-		this.imprimirProduto = imprimir;
-	}	
-	
-	
+	public void setImprimir(SN psn) { //set tem o ter o mesmo nome do atributo "imprimir" psn"parametro"
+		this.imprimir = psn;
+	}
 	
 	public Long getCodigo() {
 		return codigo;
@@ -119,6 +121,12 @@ public class Produto {
 	}
 	public void setQtdMinima(Integer qtdMinima) {
 		this.qtdMinima = qtdMinima;
+	}
+	public Integer getLucro() {
+		return lucro;
+	}
+	public void setLucro(Integer lucro) {
+		this.lucro = lucro;
 	}
 	public Integer getCst() {
 		return cst;
@@ -186,8 +194,15 @@ public class Produto {
 	public void setComplemento2(String complemento2) {
 		this.complemento2 = complemento2;
 	}
+	
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+	
 	public Boolean isNovo(){
 		return codigo == null;
 	}
-
 }

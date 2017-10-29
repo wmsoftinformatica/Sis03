@@ -34,7 +34,7 @@ public class Cliente {
 	private String mae;
 	private String referencia1;
 	private String referencia2;
-	private String dataCadastro;
+	private Date dataCadastro;
 	
 	@Enumerated(EnumType.STRING)
 	private ClienteAtivo clienteAtivo;
@@ -169,10 +169,10 @@ public class Cliente {
 	public void setClienteAtivo(ClienteAtivo clienteAtivo) {
 		this.clienteAtivo = clienteAtivo;
 	}
-	public String getDataCadastro() {
+	public Date getDataCadastro() {
 		return dataCadastro;
 	}
-	public void setDataCadastro(String dataCadastro) {
+	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 	

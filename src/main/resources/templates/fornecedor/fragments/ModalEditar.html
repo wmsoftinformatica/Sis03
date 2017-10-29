@@ -4,36 +4,157 @@
 	
  <!--modal editar fornecedor -->
     <div class="modal fade" id="modalEditarFornecedor">
-    <div class="modal-dialog">
+    <div class="modal-dialog2">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" data-dismiss="modal" class="close">
             <span>&times;</span>
           </button>
 				<div class="col-xs-10">
-					<h1 class="titulo-formulario">Editar de Cliente</h1>
+					<h1 class="titulo-formulario">Editar Fornecedor</h1>
 				</div>
 			</div>
         <form method="POST"  th:object="${fornecedor}" th:action="${fornecedor.novo}? @{/fornecedores/novo} : @{/fornecedores/{codigo}(codigo=${fornecedor.codigo})}">
           <div class="modal-body">
 
-            <div class="row">
+            <div class="row"><!-- 1-->
             
-	             <div class="col-sm-2">
+	             <div class="col-sm-1">
 	                   <div class="grupo-entrada">
 	                     <label for="codigo">Codigo</label>
 	                     <input id="codigo" th:field="*{codigo}"  class="campo" />
 	                   </div>
 	             </div>
 	             
-	             <div class="col-sm-10">
+	              <div class="col-sm-5">
 	                   <div class="grupo-entrada">
-	                     <label for="nome">banco</label>
+	                     <label for="nome">nome</label>
 	                     <input id="nome" th:field="*{nome}" type="text" class="campo" />
 	                   </div>
 	             </div>
-	             
+	             <div class="col-sm-3">
+	                   <div class="grupo-entrada">
+	                     <label for="contato">Contato</label>
+	                     <input id="contato" th:field="*{contato}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-3">
+	                   <div class="grupo-entrada">
+	                     <label for="endereco">Endereço</label>
+	                     <input id="endereco" th:field="*{endereco}" type="text" class="campo" />
+	                   </div>
+	             </div>
 	          </div>  
+	          <div class="row"> <!-- 2-->
+	             <div class="col-sm-4">
+	                   <div class="grupo-entrada">
+	                     <label for="cidade">Cidade</label>
+	                     <input id="cidade" th:field="*{cidade}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-4">
+	                   <div class="grupo-entrada">
+	                     <label for="bairro">Bairro</label>
+	                     <input id="bairro" th:field="*{bairro}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-2">
+	                 <div class="grupo-entrada">
+	                   <label for="uf">Estado</label>
+	                   <select id="uf" name="uf" th:field="*{uf}" class="campo">
+	                     <option th:value="${uf}" th:text="Selecione"></option>
+	                     <option th:each="uf : ${todosUF}" th:value="${uf}" th:text="${uf.descricao}"></option>
+	                     
+	                   </select>
+	                 </div>
+              	 </div>
+              	 
+              	 <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="cep">CEP</label>
+	                     <input id="cep" th:field="*{cep}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	          
+	          </div>
+	          <div class="row"> <!-- 3-->
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="telefone1">Telefone 1</label>
+	                     <input id="telefone1" th:field="*{telefone1}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="telefone2">Telefone 2</label>
+	                     <input id="telefone2" th:field="*{telefone2}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-4">
+	                   <div class="grupo-entrada">
+	                     <label for="email">Email</label>
+	                     <input id="email" th:field="*{email}" type="email" class="campo" />
+	                   </div>
+	             </div>
+	             
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="cnpj">CNPJ</label>
+	                     <input id="cnpj" th:field="*{cnpj}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="ie">IE</label>
+	                     <input id="ie" th:field="*{ie}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	          </div>
+	          
+	          <div class="row"> <!-- 4-->
+	              <div class="col-sm-3">
+	                   <div class="grupo-entrada">
+	                     <label for="banco">Banco</label>
+	                     <input id="banco" th:field="*{banco}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="agencia">Agencia</label>
+	                     <input id="agencia" th:field="*{agencia}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	             <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="conta">Conta</label>
+	                     <input id="conta" th:field="*{conta}" type="text" class="campo" />
+	                   </div>
+	             </div>
+	        
+		          <div class="col-sm-2">
+	                  <div class="grupo-entrada">
+	                    <label for="clienteAtivo">Ativo</label>
+	                    
+	                    <select id="clienteAtivo" th:field="*{clienteAtivo}"  class="campo">
+	                      <option th:value="${clienteAtivo}" th:text="Selecione"></option>
+	                      <option th:each="clienteAtivo : ${todosClienteAtivo}" th:value="${clienteAtivo}" th:text="${clienteAtivo.descricao}"></option>
+	                      
+	                    </select>
+	                  </div> 
+	                </div>
+	                <div class="col-sm-1">
+	                
+	                </div>
+	                <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="dataCadastro">Data do Cadastro</label>
+	                     <input id="dataCadastro" name="dataCadastro" type="date" class="campo" />
+	                   </div>
+	                  
+	                </div>
+	           </div>     
+	          
 	           <div class="row"> 
 	           
 		           <div class="col-sm-12">

@@ -29,6 +29,7 @@ public class Fornecedor {
 	private String conta;
 	private String dataCadastro;
 	
+	
 	@Enumerated(EnumType.STRING)
 	private ClienteAtivo clienteAtivo;
 	

@@ -4,7 +4,7 @@
 	
  <!--modal editar produto -->
     <div class="modal fade" id="modalEditarProduto">
-    <div class="modal-dialog">
+    <div class="modal-dialog2">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" data-dismiss="modal" class="close">
@@ -17,24 +17,185 @@
         <form method="POST"  th:object="${produto}" th:action="${produto.novo}? @{/produtos/novo} : @{/produtos/{codigo}(codigo=${produto.codigo})}">
           <div class="modal-body">
 
-            <div class="row">
+            <div class="row"> <!--1-->
             
-	             <div class="col-sm-2">
+	             <div class="col-sm-1">
 	                   <div class="grupo-entrada">
 	                     <label for="codigo">Codigo</label>
 	                     <input id="codigo" th:field="*{codigo}"  class="campo" />
 	                   </div>
 	             </div>
 	             
-	             <div class="col-sm-10">
+	             <div class="col-sm-5">
 	                   <div class="grupo-entrada">
-	                     <label for="descricao">banco</label>
+	                     <label for="descricao">Descrição</label>
 	                     <input id="descricao" th:field="*{descricao}" type="text" class="campo" />
 	                   </div>
 	             </div>
-	             
+	             <div class="col-sm-3"> 
+			                <div class="grupo-entrada">
+			                  <label for="setor">Setor</label>
+			                  <input id="setor" th:field="*{setor}" type="text" class="campo"/>
+			                </div>
+		             </div>   
+		             <div class="col-sm-3"> 
+		                <div class="grupo-entrada">
+		                  <label for="fornecedor">Fornecedor</label>
+		                  <input id="fornecedor" th:field="*{fornecedor}" type="text" class="campo"/>
+		                </div>
+            		 </div> 
 	          </div>  
+	          
+	          <div class="row"> <!-- 2 -->
+		            <div class="col-sm-4">
+		              <div class="grupo-entrada">
+		                <label for="fabricante">Fabricante</label>
+		                <input id="fabricante" th:field="*{fabricante}" type="text" class="campo" />
+		              </div>
+		            </div>
+		            <div class="col-sm-1">
+		              <div class="grupo-entrada">
+		                <label for="un">UN</label>
+		                <input id="un" th:field="*{un}" type="text" class="campo" />
+		              </div>
+		            </div>
+		            
+		            <div class="col-sm-2">
+		              <div class="grupo-entrada">
+		                <label for="precoCusto">Preço Custo</label>
+		                <input id="precoCusto" th:field="*{precoCusto}" type="text" class="campo" />
+		              </div>
+		            </div>
+		            <div class="col-sm-1">
+		              <div class="grupo-entrada">
+		                <label for="lucro">Lucro</label>
+		                <input id="lucro" th:field="*{lucro}" type="text" class="campo"/>
+		              </div>
+		            </div>
+		            <div class="col-sm-2">
+		              <div class="grupo-entrada">
+		                <label for="precoVenda">Preço Venda</label>
+		                <input id="precoVenda" th:field="*{precoVenda}" type="text" class="campo" />
+		              </div>
+		            </div>
+		            <div class="col-sm-2">
+		              <div class="grupo-entrada">
+		                <label for="qtd">Quantidade</label>
+		                <input id="qtd" th:field="*{qtd}" type="text" class="campo" />
+		              </div>
+		            </div>
+            
+               </div>
+               <div class="row"> <!-- 3 -->
+		            <div class="col-sm-2">
+		              <div class="grupo-entrada">
+		                <label for="qtdMinima">QTD Minima</label>
+		                <input id="qtdMinima" th:field="*{qtdMinima}" type="text" class="campo" />
+		              </div>
+		            </div>
+		             <div class="col-sm-2">
+	                  
+	                       <div class="grupo-entrada">
+			                <label for="imprimir">Imprimir</label>
+			                <select id="imprimir"  th:field="*{imprimir}" class="campo">
+			                  <option th:value="${sn}" th:text="Selecione"></option>
+			                  <option th:each="sn : ${todosSN}" th:value="${sn}" th:text="${sn.descricao}"></option>
+			                     
+			                </select>
+                     </div>
+		            </div>
+		            
+		            <div class="col-sm-2">
+		                <div class="grupo-entrada">
+		                  <label for="cst">CST</label>
+		                  <input id="cst" th:field="*{cst}" type="text" class="campo" />
+		                </div>
+		            </div>   
+		            <div class="col-sm-1">
+		                <div class="grupo-entrada">
+		                  <label for="aliquotaIpi">Ali. IPI</label>
+		                  <input id="aliquotaIpi" th:field="*{aliquotaIpi}" type="text" class="campo"/>
+		                </div>
+		            </div> 
+		            <div class="col-sm-1">
+		                <div class="grupo-entrada">
+		                  <label for="codigoIpi">Cod. IPI</label>
+		                  <input id="codigoIpi" th:field="*{codigoIpi}" type="text" class="campo"/>
+		                </div>
+		            </div>
+		            <div class="col-sm-2">
+		                <div class="grupo-entrada">
+		                  <label for="pesoBruto">Peso Bruto</label>
+		                  <input id="pesoBruto" th:field="*{pesoBruto}" type="text" class="campo" />
+		                </div>
+		            </div>    
+		            <div class="col-sm-2">
+		                <div class="grupo-entrada">
+		                  <label for="pesoLiquido">Peso Líquido</label>
+		                  <input id="pesoLiquido" th:field="*{pesoLiquido}" type="text" class="campo"/>
+		                </div>
+		            </div>  
+               </div>
+               <div class="row"> <!-- 4 -->
+                
+	                <div class="col-sm-1">
+	                  <div class="grupo-entrada">
+	                    <label for="icms">ICMS</label>
+	                    <input id="icms" th:field="*{icms}" type="text" class="campo"/>
+	                  </div>   
+	                   
+	                </div>
+	
+	                <div class="col-sm-1">
+	                  <div class="grupo-entrada">
+	                    <label for="iss">ISS</label>
+	                    <input id="iss" th:field="*{iss}" type="text" class="campo" />
+	                  </div>   
+	                </div>
+	                <div class="col-sm-1">
+	                  <div class="grupo-entrada">
+	                    <label for="simples">Simples</label>
+	                    <input id="simples" th:field="*{simples}" type="text" class="campo" />
+	                  </div>   
+	                </div>
+	                <div class="col-sm-2">
+	                  <div class="grupo-entrada">
+			                <label for="complemento">Complemento</label>
+			                <select id="complemento"  th:field="*{complemento}" class="campo">
+			                  <option th:value="${sn}" th:text="Selecione"></option>
+			                  <option th:each="sn : ${todosSN}" th:value="${sn}" th:text="${sn.descricao}"></option>
+			                     
+			                </select>
+                     </div>
+
+	                </div>
+	                <div class="col-sm-1">
+	                  <div class="grupo-entrada">
+	                    <label for="complementoPorcentagem">100%</label>
+	                    <input id="complementoPorcentagem" th:field="*{complementoPorcentagem}" type="text" class="campo" />
+	                  </div>   
+	                </div>
+	                <div class="col-sm-3">
+	                  <div class="grupo-entrada">
+	                    <label for="complemento1">Complemento1</label>
+	                    <input id="complemento1" th:field="*{complemento1}" type="text" class="campo" />
+	                  </div>   
+	                </div>
+	                <div class="col-sm-3">
+	                  <div class="grupo-entrada">
+	                    <label for="complemento2">Complemento2</label>
+	                    <input id="complemento2" th:field="*{complemento2}" type="text" class="campo" />
+	                  </div>   
+	                </div>
+               </div>
 	           <div class="row"> 
+		           	 <div class="col-sm-2">
+	                   <div class="grupo-entrada">
+	                     <label for="dataCadastro">Data do Cadastro</label>
+	                     <input id="dataCadastro" th:field="*{dataCadastro}" type="date" class="campo" />
+	                   </div>
+	                  
+	                </div> 
 	           
 		           <div class="col-sm-12">
 			          <div class="modal-footer">

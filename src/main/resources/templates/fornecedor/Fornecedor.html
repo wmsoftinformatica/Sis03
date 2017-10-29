@@ -47,7 +47,24 @@
 									title="Editar" rel="tooltip" data-toggle="modal"
 									data-target="#modalEditarFornecedor"
 									th:attr="data-codigo=${fornecedor.codigo}, 
-									data-nome=${fornecedor.nome}">
+									data-nome=${fornecedor.nome},
+									data-contato=${fornecedor.contato},
+									data-endereco=${fornecedor.endereco},
+									data-cidade=${fornecedor.cidade},
+									data-bairro=${fornecedor.bairro},
+									data-uf=${fornecedor.uf},
+									data-cep=${fornecedor.cep},
+									data-telefone1=${fornecedor.telefone1},
+									data-telefone2=${fornecedor.telefone2},
+									data-email=${fornecedor.email},
+									data-cnpj=${fornecedor.cnpj},
+									data-ie=${fornecedor.ie},
+									data-banco=${fornecedor.banco},
+									data-agencia=${fornecedor.agencia},
+									data-conta=${fornecedor.conta},
+									data-clienteativo=${fornecedor.clienteAtivo},
+									data-datacadastro=${fornecedor.dataCadastro}">
+									
 									
 									
 									<span class="glyphicon glyphicon-pencil text-warning"></span></a> <a
